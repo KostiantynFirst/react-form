@@ -1,11 +1,31 @@
+import { Component } from "react";
 import { Container } from "./App.styled";
+import { Form } from "./Form";
 
-export const App = () => {
-  return (
-    <Container>
-      
+export class App extends Component {
 
+state = {
 
-    </Container>
-  );
+}
+
+formSubmitHandler = data => {
+  console.log(data);
+}
+
+render() {
+    return (
+      <Container>
+        <Form onSubmit={this.formSubmitHandler} />
+
+      </Container>
+)
+
+}
+
 };
+
+
+
+
+  
+
