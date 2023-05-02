@@ -1,5 +1,6 @@
 import { Component } from "react";
-import { nanoid } from 'nanoid'
+import { nanoid } from 'nanoid';
+import { FormLabel, FormLabelInput, FormInput, FormParagraph, FormBtn } from "./Form.styled";
 
 
 export class Form extends Component {
@@ -46,73 +47,73 @@ export class Form extends Component {
 
         return (
           
-          <form onSubmit={this.hanleSubmit}>
+          <FormLabel onSubmit={this.hanleSubmit}>
       
-          <label htmlFor={this.nameInputId}> 
-            Имя <input 
+          <FormLabelInput htmlFor={this.nameInputId}> 
+            Имя <FormInput 
                   type="text" 
                   name="name"
                   value={this.state.name} 
                   onChange={this.handleChange}
                   id={this.nameInputId}
                 />
-          </label>
+          </FormLabelInput>
       
-          <label htmlFor={this.tagInputId} >
-            Фамилия <input 
+          <FormLabelInput htmlFor={this.tagInputId} >
+            Фамилия <FormInput 
                       type="text" 
                       name="tag"
                       value={this.state.tag} 
                       onChange={this.handleChange}
                       id={this.tagInputId}
                   />
-          </label>
+          </FormLabelInput>
 
-          <p>Ваш уровень разработчика:</p>
+          <FormParagraph>Ваш уровень разработчика:</FormParagraph>
       
-          <label>
-          <input 
+          <FormLabelInput>
+          <FormInput 
               type="radio" 
               name='experience' 
               value='junior' 
               onChange={this.handleChange}
               checked={this.state.experience === 'junior'} /> 
               Junior
-          </label>
+          </FormLabelInput>
 
-          <label>
-          <input 
+          <FormLabelInput>
+          <FormInput 
               type="radio" 
               name='experience' 
               value='middle' 
               onChange={this.handleChange}
               checked={this.state.experience === 'middle'} /> 
               Middle
-          </label>
+          </FormLabelInput>
 
-          <label>
-          <input 
+          <FormLabelInput>
+          <FormInput 
               type="radio" 
               name='experience' 
               value='senior' 
               onChange={this.handleChange}
               checked={this.state.experience === 'senior'} /> 
               Senior
-          </label>
+          </FormLabelInput>
 
-          <label>
-          <input 
+          <FormLabelInput>
+          <FormInput 
               type="checkbox" 
               name="licence" 
               checked={this.state.licence}
               onChange={this.handleLicenceChange}
            /> 
            Согласен с условиями
-          </label>
+          </FormLabelInput>
       
-          <button type="submit" disabled={!this.state.licence}>Отправить</button>
+          <FormBtn type="submit" disabled={!this.state.licence}>Отправить</FormBtn>
            
-           </form>
+           </FormLabel>
       
       
       
