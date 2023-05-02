@@ -46,7 +46,7 @@ export class Form extends Component {
 
         return (
           
-           <form onSubmit={this.hanleSubmit}>
+          <form onSubmit={this.hanleSubmit}>
       
           <label htmlFor={this.nameInputId}> 
             Имя <input 
