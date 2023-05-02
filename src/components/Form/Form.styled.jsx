@@ -1,12 +1,17 @@
 import styled from "styled-components";
 
 export const FormLabel = styled.form`
-    display: flex;
+    display: inline-flex;
     flex-direction: column;
     align-items: center;
     font-family: Arial, sans-serif;
     margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid #008CBA;
+    padding: 20px;
 `
+
 export const FormLabelInput = styled.label`
     display: flex;
     flex-direction: column;

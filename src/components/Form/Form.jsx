@@ -70,7 +70,7 @@ export class Form extends Component {
           </FormLabelInput>
 
           <FormParagraph>Ваш уровень разработчика:</FormParagraph>
-      
+
           <FormLabelInput>
           <FormInput 
               type="radio" 
@@ -110,6 +110,7 @@ export class Form extends Component {
            /> 
            Согласен с условиями
           </FormLabelInput>
+
       
           <FormBtn type="submit" disabled={!this.state.licence}>Отправить</FormBtn>
            
